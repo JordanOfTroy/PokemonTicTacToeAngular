@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { SearchComponent } from './search/search.component';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     TopNavComponent,
     SideNavComponent,
-    SearchComponent
+    SearchComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
