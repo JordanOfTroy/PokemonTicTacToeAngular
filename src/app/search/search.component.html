@@ -1,1 +1,7 @@
-<p>search works!</p>
+<p>search results is working</p>
+<div *ngIf="apiResponse">
+    <h3>API Response</h3>
+    <P >{{apiResponse}}</P>
+    <!-- <P *ngFor="let response apiResponse">{{response}}</P> -->
+    <img [src]="apiResponse" alt="">
+</div>
