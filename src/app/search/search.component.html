@@ -1,7 +1,25 @@
-<p>search results is working</p>
+<mat-card>
+    <mat-card-title>Search</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="formBoi" (ngSubmit)="search()">
+  
+        <section>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Pokemon name" formControlName="searchTerm">
+          </mat-form-field>
+        </section>
+  
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+<span *ngIf="imageArray">
+    <a *ngFor="let image of imageArray">
+        <img  [src]=image alt="">
+    </a>
+</span>
+
 <div *ngIf="apiResponse">
-    <h3>API Response</h3>
-    <P >{{apiResponse}}</P>
-    <!-- <P *ngFor="let response apiResponse">{{response}}</P> -->
-    <img [src]="apiResponse" alt="">
+    <h3>API Response:</h3>
+    <p >{{apiResponse}}</p>
 </div>

@@ -15,7 +15,7 @@ export class GitDatInfoService {
 
   /** GET pokemon from the server */
   searchPokemon(name: string): Observable<any> {
-    return this.http.get<any>(`${this.endpoint}pokemon/${name}`)
+    return this.http.get<any>(`${this.endpoint}pokemon/${name.toLocaleLowerCase()}`)
   }
 
 }
