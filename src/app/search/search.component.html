@@ -15,7 +15,9 @@
 
 <span *ngIf="imageArray">
     <a *ngFor="let image of imageArray">
-        <img  [src]=image alt="">
+      <button>
+        <img  [src]=image alt="" (click)="selectSprite(image)">
+      </button>
     </a>
 </span>
 
